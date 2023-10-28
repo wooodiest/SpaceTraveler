@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clRecyclerPlanetItem"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/rounded_transparent60_background_items">
+
+    <ImageView
+        android:id="@+id/imgRecyclerPlanetItem"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:background="@drawable/rounded_background_text_white"
+        android:src="@drawable/steel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+    <Button
+        android:id="@+id/btnRecyclerPlanetItem"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:minHeight="65dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Buy"
+        android:background="@drawable/rounded_button_purple_background"
+        app:layout_constraintTop_toBottomOf="@+id/imgRecyclerPlanetItem">
+
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/llRecyclerPlanetItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="135dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgRecyclerPlanetItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/txvRecyclerPlanetItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_transparent30_background_valuable_items"
+            android:padding="5dp"
+            android:textSize="17sp"
+            android:text="1. Primary steelmaking (1/5)"
+            android:gravity="center">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_transparent30_background_valuable_items"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txvRecyclerPlanetItemDescription"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+                android:padding="8dp"
+                android:text="The iron is producing in small shaft furnaces as solid lumps, called blooms, and these were then hot forged into bars of wrought iron, a malleable material containing bits of slag and charcoal."
+                android:background="@drawable/rounded_background_text_white"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:id="@+id/llRecyclerPlanetItemPrizeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_background_text_white"
+                android:orientation="horizontal"
+                android:padding="3dp">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/coins">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/txvRecyclerPlanetItemAmountToPrize"
+                    android:text="50k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#435760">
+
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

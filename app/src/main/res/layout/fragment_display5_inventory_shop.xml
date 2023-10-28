@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundApp"
+    tools:context=".Display5InventoryShopFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvMainDisplayTutorialText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_background_valuable_items"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Welcome to the world!!! At the beginning of your adventure, click on the screen to get coins. They will be needed for further space exploration."
+                android:visibility="gone">
+
+            </TextView>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llDisplayShopAd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background_items"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txvDisplayShopAdInfo"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/rounded_background_text_white"
+                android:text="Watch ad to get:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/less_rounded_transparent30_background_valuable_items"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imgDisplayShopAdInfo"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:src="@drawable/rest3"
+                    android:layout_height="100dp">
+
+                </ImageView>
+
+                <Button
+                    android:id="@+id/btnDisplayShopAdInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take"
+                    android:padding="8dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_button_purple_background"
+                    android:textColor="#fff"
+                    android:textSize="17sp">
+
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <!--      tickets       -->
+            <LinearLayout
+                android:id="@+id/llDisplayTicketsWindow"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_background_items"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvDisplayShopTicketsInfo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:text="Depending on the ticket gives you resources or coins that you could get at given time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvShopTicket1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/less_rounded_transparent30_background_valuable_items"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvShopTicket2"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/less_rounded_transparent30_background_valuable_items"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+            <!--\\\      tickets       \\\-->
+
+            <!--     fun fact       -->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_background_text_white">
+                <TextView
+                    android:id="@+id/txvDisplayShopFunFact"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="#fff"
+                    android:text="Stars at the edge of our galaxy move faster than we predict based on the distribution of visible matter in our galaxy. The simplest way to resolve this discrepancy is to postulate the existence of non-luminous matter, which we call dark matter."
+                    android:background="@drawable/rounded_button_purple_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+            <!--///     fun fact       ///-->
+            <!--      tokens       -->
+            <LinearLayout
+                android:id="@+id/llDisplayShopTokens"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_background_items"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvDisplayShopTokensInfo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="This is a mini-game where you have to choose one of the many rewards. Depending on the level, it offers different and better rewards"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvShopToken"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/less_rounded_transparent30_background_valuable_items"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+            <!--\\\      tokens       \\\-->
+            <!--      console       -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDisplayShopConsole"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_background_items"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnDisplayShopConsoleEnter"
+                    android:layout_width="wrap_content"
+                    android:maxWidth="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="USE"
+                    android:background="@drawable/rounded_button_purple_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtDisplayShopConsole"
+                    android:layout_width="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="45dp"
+                    android:gravity="center"
+                    android:hint="Enter a code"
+                    android:background="@drawable/rounded_transparent30_background_valuable_items"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDisplayShopConsoleEnter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </EditText>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--\\\      console       \\\-->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

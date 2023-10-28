@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="backgroundApp">#2D434C</color>
+    <color name="backgroundItems">#88ADB9</color>
+    <color name="backgroundValuableItems">#3A6371</color>
+    <color name="backgroundTextWhite">#D6DFE2</color>
+    <color name="menuGrey">#2F372F</color>
+    <color name="purpleButtonBackground">#FF6200EE</color>
+
+    <color name="transparent60BackgroundApp">#A32D434C</color>
+    <color name="transparent60BackgroundItems">#A388ADB9</color>
+    <color name="transparent60BackgroundValuableItems">#A33A6371</color>
+    <color name="transparent60BackgroundTextWhite">#A3D6DFE2</color>
+    <color name="transparent60MenuGrey">#A32F372F</color>
+
+    <color name="transparent30BackgroundApp">#592D434C</color>
+    <color name="transparent30BackgroundItems">#5988ADB9</color>
+    <color name="transparent30BackgroundValuableItems">#593A6371</color>
+    <color name="transparent30BackgroundTextWhite">#59D6DFE2</color>
+    <color name="transparent30MenuGrey">#592F372F</color>
+
+    <color name="transparent30Green">#A912460E</color>
+    <color name="transparent60Green">#12460E</color>
+    <color name="transparent30Red">#A94E0C1B</color>
+
+    <color name="valuableInfo2">#294954</color>
+    <color name="backgroundItems2">#57727B</color>
+</resources>

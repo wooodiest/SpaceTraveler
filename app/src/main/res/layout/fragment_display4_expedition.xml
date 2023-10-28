@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:background="@color/backgroundApp"
+    android:paddingTop="50dp"
+    android:paddingBottom="90dp"
+    tools:context=".Display4ExpeditionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionMissionBar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="19sp"
+                android:text="Mission"
+                android:gravity="center"
+                android:background="@color/transparent60BackgroundValuableItems"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionLogBookBar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="19sp"
+                android:text="Log book"
+                android:gravity="center"
+                android:background="@color/backgroundValuableItems"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/flMainGameDisplayExpedition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

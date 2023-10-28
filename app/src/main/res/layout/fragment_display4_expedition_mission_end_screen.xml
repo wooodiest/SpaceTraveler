@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_background_items"
+    tools:context=".Display4ExpeditionMissionEndScreenFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionMissionTitleEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent60_background_valuable_items"
+                android:padding="7dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="41. Mysterious unidentified space object near jupiter">
+
+            </TextView>
+            <TextView
+                android:textSize="13sp"
+                android:id="@+id/txvMainGameDisplayExpeditionMissionDescriptionEnd"
+                android:layout_width="match_parent"
+                android:text="Scientists on the ground have detected a strange signal coming from near the orbit of Venus. A few months later, we lost contact with the court that controlled the area. She received a short pulse of radiation of unknown origin and nature, which disrupted the operation of all devices and telescopes. Then we saw disturbing changes in the gravitational field just beyond the orbit of Uranus. Looks like there might be something there. We don't know what's going on, we need to investigate as soon as possible. I'm just afraid we don't have enough technology yet."
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background_text_white"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent30_background_valuable_items"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayExpeditionMissionRequiredResourcesEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:text="Required resources: ">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgRecyclerRequireResourcesEnd"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/atom">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txvRecyclerRequireResourcesEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="2115">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent30_background_valuable_items"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayExpeditionMissionRewardEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:text="Rewards: ">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/molecule">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayExpeditionMissionRewardMoleculeEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="30">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/emerald">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayExpeditionMissionRewardEmeraldEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="100">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionMissionAcceptEnd"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Accept Mission"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_button_purple_background">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

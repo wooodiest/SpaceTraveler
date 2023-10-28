@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_background_items"
+    tools:context=".Display4ExpeditionMissionResultFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionMissionResultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent60_background_valuable_items"
+                android:padding="7dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="6. The first spacecraft to reach the vicinity of Earth's Moon">
+
+            </TextView>
+            <TextView
+                android:textSize="13sp"
+                android:id="@+id/txvMainGameDisplayExpeditionMissionResultDescription"
+                android:layout_width="match_parent"
+                android:text="Luna 1 was the first spacecraft to reach the Moon, and the first of a series of Soviet automatic interplanetary stations successfully launched in the direction of the Moon. The spacecraft was sphere-shaped. Five antennae extended from one hemisphere. Instrument ports also protruded from the surface of the sphere. There were no propulsion systems on the Luna 1 spacecraft itself. The primary objectives of the mission were to measure temperature and pressure inside the vehicle; study the gas components of interplanetary matter and corpuscular radiation of the Sun; measure the magnetic fields of the Earth and moon; study meteoric particles in space; study the distribution of heavy nuclei in primary cosmic radiation; and study other properties of cosmic rays."
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background_text_white"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:textSize="13sp"
+                android:id="@+id/txvMainGameDisplayExpeditionMissionResultDispatch"
+                android:layout_width="match_parent"
+                android:text="On 3 January, at a distance of 113,000 km from Earth, a large cloud of sodium gas was released by the spacecraft. This glowing orange trail of gas, visible over the Indian Ocean with the brightness of a sixth-magnitude star, allowed astronomers to track the spacecraft. It also served as an experiment on the behavior of gas in outer space. There were five different sets of scientific devices for studying interplanetary space, including a magnetometer, geiger counter, scintillation counter, and micrometeorite detector, and other equipment. The measurements obtained during this mission provided new data on the Earth's radiation belt and outer space, including the discovery that the Moon had no magnetic field and that a solar wind, a strong flow of ionized plasma emmanating from the Sun, streamed through interplanetary space."
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background_text_white"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent30_background_valuable_items"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayExpeditionMissionResultReward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:text="Rewards: ">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/molecule">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayExpeditionMissionResultRewardMolecule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="10">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_background_text_white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/emerald">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayExpeditionMissionResultRewardEmerald"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="25">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txvMainGameDisplayExpeditionMissionNext"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Next"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/rounded_button_purple_background">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

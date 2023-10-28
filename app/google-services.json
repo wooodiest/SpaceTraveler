@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942682261537",
+    "project_id": "space-traveler-62037",
+    "storage_bucket": "space-traveler-62037.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942682261537:android:3170e63d2e6064c090fb60",
+        "android_client_info": {
+          "package_name": "misiek.example.spacetraveler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942682261537-n2h220prge3d2nmvhre28ic0cudh4e4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn0mzMFmkx2ywJb_wD3Fzifs0BhxMiFYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942682261537-n2h220prge3d2nmvhre28ic0cudh4e4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

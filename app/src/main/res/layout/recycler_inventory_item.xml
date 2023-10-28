@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:background="@drawable/rounded_background_items"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:minHeight="140dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgRecyclerInventoryItem"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_background_text_white"
+        android:padding="4dp"
+        android:src="@drawable/cobalt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/llRecyclerInventoryItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="120dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_background_text_white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgRecyclerInventoryItem"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/txvRecyclerInventoryItemDescription"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:text="Cobalt is a lustrous very hard silvery metal belonging to a group called the transition metals. It is one of only 3 ferromagnetic transition elements along with iron and nickel. Lithium cobalt oxide is widely used in lithium-ion battery cathodes. The temperature stability of Cobalt-based superalloys makes them suitable for turbine blades for gas turbines and aircraft jet engines."
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvRecyclerInventoryItemDisplayValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="12,4K"
+        android:background="@drawable/rounded_background_text_white"
+        app:layout_constraintEnd_toStartOf="@+id/llRecyclerInventoryItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRecyclerInventoryItem">
+
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

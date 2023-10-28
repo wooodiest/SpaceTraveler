@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:background="@color/backgroundApp"
+    tools:context=".MainGameDisplayFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--  video view in background -->
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <misiek.example.spacetraveler.MutedVideoView
+                android:id="@+id/vwMainGameDisplay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0">
+
+            </misiek.example.spacetraveler.MutedVideoView>
+        </RelativeLayout>
+        <!--\\\  video view in background \\\-->
+
+        <!--  game display  -->
+        <FrameLayout
+            android:id="@+id/flMainGameDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </FrameLayout>
+        <!--\\\  game display  \\\-->
+
+        <!--  bottom toolbar  -->
+        <LinearLayout
+            android:id="@+id/llMainGameDisplayBottomToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:background="@color/transparent60MenuGrey"
+            android:weightSum="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/imgMainGameDisplayBottomToolbarPerks"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/perks">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/imgMainGameDisplayBottomToolbarPlanet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/planet">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/imgMainGameDisplayBottomToolbarSpace"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/space">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/imgMainGameDisplayBottomToolbarExpedition"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/expedition11">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/imgMainGameDisplayBottomToolbarInventory"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/items">
+
+            </ImageView>
+        </LinearLayout>
+        <!--\\\  bottom toolbar  \\\-->
+
+        <!--  top toolbar  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMainGameDisplayTopToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:background="@color/transparent60MenuGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--  Settings  -->
+            <ImageView
+                android:id="@+id/imgMainGameDisplayTopToolbarSettings"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/cog"
+                app:tint="@color/transparent60MenuGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+            <!--\\\  Settings  \\\-->
+            <!--/////////////////////////////////////////////////////////////////-->
+            <!--  Resources data  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMainGameDisplayTopToolbarEmerald"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/transparent60MenuGrey">
+                <ImageView
+                    android:id="@+id/imgMainGameDisplayTopToolbarEmerald"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/emerald"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayTopToolbarEmerald"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toEndOf="@+id/imgMainGameDisplayTopToolbarEmerald"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMainGameDisplayTopToolbarCoinMolecule"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/transparent60MenuGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/clMainGameDisplayTopToolbarEmerald"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgMainGameDisplayTopToolbarCoinMolecule"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/coins"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txvMainGameDisplayTopToolbarCoinMolecule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="#fff"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgMainGameDisplayTopToolbarCoinMolecule"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--\\\  Resources data  \\\-->
+            <!--/////////////////////////////////////////////////////////////////-->
+            <!--  Stats  -->
+            <ImageView
+                android:id="@+id/imgMainGameDisplayTopToolbarStats"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/progression"
+                android:layout_marginRight="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/clMainGameDisplayTopToolbarCoinMolecule"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/transparent60MenuGrey">
+
+            </ImageView>
+            <!--\\\  Stats  \\\-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--\\\  top toolbar  \\\-->
+
+        <!--  offline reward  -->
+        <ScrollView
+            android:id="@+id/swMainGameDisplayOfflineReward"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_transparent60_background_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayOfflineRewardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Offline Rewards"
+                    android:textColor="#fff"
+                    android:textSize="22sp">
+
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMainGameDisplayOfflineReward"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/rvMainGameDisplayOfflineRewardInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="We made some resources while you were away "
+                        android:textColor="#fff">
+
+                    </TextView>
+                    <ProgressBar
+                        android:id="@+id/pbMainGameDisplayOfflineRewardInfo"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_background_text_white"
+                        android:max="100"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:paddingBottom="5dp"
+                        android:progress="70" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/rvMainGameDisplayOfflineRewardInfoYouWereAwayTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:padding="3dp"
+                            android:text="1h:27m:13s"
+                            android:textColor="#fff"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/rvMainGameDisplayOfflineRewardInfoMaxTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="13dp"
+                            android:layout_marginBottom="3dp"
+                            android:padding="3dp"
+                            android:text="2:00h"
+                            android:textColor="#fff"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMainGameDisplayOfflineTake"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_transparent60_background_valuable_items"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayOfflineTake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Take"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:padding="4dp"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMainGameDisplayOfflineTakeX2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_transparent60_background_valuable_items">
+
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayOfflineTakeX2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Take X2"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:textColor="#fff"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+        <!--\\\  offline reward  \\\-->
+
+        <!--  settings  -->
+        <ScrollView
+            android:id="@+id/swMainGameDisplaySettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_transparent60_background_app"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Settings"
+                    android:textColor="#fff"
+                    android:textSize="19sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Music"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsSounds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sound effects"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsFaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:visibility="gone"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent60_background_app"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySettingsVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Version 1.0"
+                    android:textColor="#fff"
+                    android:textSize="14sp">
+
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+        <!--\\\  settings  \\\-->
+
+
+        <!--  stats -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMainGameDisplayStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:visibility="invisible"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txvMainGameDisplayStatsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Stats"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txvMainGameDisplayStatsCancel"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_transparent60_background_valuable_items"
+                android:text="Cancel"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMainGameDisplayStats"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/txvMainGameDisplayStatsCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvMainGameDisplayStatsTitle">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--\\\  stats \\\-->
+
+        <!--  Today quest -->
+        <ScrollView
+            android:id="@+id/swMainGameDisplayQuest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_transparent60_background_app"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayQuestTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Daily quest"
+                    android:textColor="#fff"
+                    android:textSize="19sp">
+
+                </TextView>
+                <LinearLayout
+                    android:id="@+id/llMainGameDisplayQuestName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_transparent60_background_items"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayQuestName1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Click 1000 times">
+
+                        </TextView>
+                        <ProgressBar
+                            android:id="@+id/pbMainGameDisplayQuest1"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="40" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llMainGameDisplayQuestName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_transparent60_background_items"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayQuestName2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Buy 15 planet upgrades">
+
+                        </TextView>
+                        <ProgressBar
+                            android:id="@+id/pbMainGameDisplayQuest2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="5" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llMainGameDisplayQuestName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_background_items"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txvMainGameDisplayQuestName3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Finish space mission">
+
+                        </TextView>
+                        <ProgressBar
+                            android:id="@+id/pbMainGameDisplayQuest3"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="100" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayQuestRewardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Rewards:"
+                    android:textColor="#fff"
+                    android:textSize="19sp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imgMainGameDisplayQuestReward1"
+                        android:layout_margin="10dp"
+                        android:layout_width="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/coint4"
+                        android:layout_height="60dp">
+
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/imgMainGameDisplayQuestReward2"
+                        android:layout_margin="10dp"
+                        android:layout_width="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/molecule"
+                        android:layout_height="60dp">
+
+                    </ImageView>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayQuestCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent60_background_valuable_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+
+            </LinearLayout>
+        </ScrollView>
+        <!--\\\  Today quest \\\-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGameDisplayLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/txvGameDisplayLanguageInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvGameDisplayLanguageInfo"
+                app:layout_constraintBottom_toTopOf="@+id/txvGameDisplayLanguageNext">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/llLanguageChangeEnglish"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_transparent60_background_items"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgLanguageChangeEnglish"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/english"
+                            android:layout_marginLeft="5dp">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/txvLanguageChangeEnglish"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#fff"
+                            android:textSize="23sp"
+                            android:text="English">
+
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llLanguageChangePolish"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgLanguageChangePolish"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/polish">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/txvLanguageChangePolish"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#fff"
+                            android:textSize="23sp"
+                            android:text="Polski">
+
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llLanguageChangeGermany"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgLanguageChangeGermany"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/germany"
+                            android:layout_marginLeft="5dp">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/txvLanguageChangeGermany"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#fff"
+                            android:textSize="23sp"
+                            android:text="Deutsche">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLanguageChangeSpanish"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgLanguageChangeSpanish"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/spanish">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/txvLanguageChangeSpanish"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#fff"
+                            android:textSize="23sp"
+                            android:text="Español">
+
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llLanguageChangeFrench"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgLanguageChangeFrench"
+                            android:layout_width="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/french">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/txvLanguageChangeFrench"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:layout_marginRight="5dp"
+                            android:textSize="23sp"
+                            android:text="Français">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+            <TextView
+                android:id="@+id/txvGameDisplayLanguageNext"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="5dp"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:text="Next"
+                android:background="@drawable/rounded_button_purple_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--  Policy -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGameDisplayPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/txvGameDisplayPolicyAccept"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="5dp"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:text="Accept"
+                android:background="@drawable/rounded_button_purple_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txvGameDisplayPolicyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Policy"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_transparent60_background_items"
+                android:minHeight="100dp"
+                app:layout_constraintBottom_toTopOf="@+id/txvGameDisplayPolicyAccept"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvGameDisplayPolicyInfo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txvGameDisplayPolicyDescription"
+                        android:layout_width="match_parent"
+                        android:text="Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD. Here someday I will write what the policy and legal information should look like and now JDDDDD"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:gravity="center">
+
+                    </TextView>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--\\\  Policy \\\-->
+
+        <!--  Starting settings -->
+        <ScrollView
+            android:id="@+id/scStartingSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_transparent60_background_app"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/txvMainGameDisplayStartingSettingsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Settings"
+                    android:textColor="#fff"
+                    android:textSize="19sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayStartingSettingsMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Music"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayStartingSettingsSounds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sound effects"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayStartingSettingsNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_transparent30_background_items"
+                    android:textColor="#fff"
+                    android:textSize="23sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplayStartingSettingsLocalSaveInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Attention! The application saves data locally on the device. I am still working on a database linked to a google account. Sorry for the inconvenience."
+                    android:textColor="#fff"
+                    android:textSize="14sp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_transparent60_background_app"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayStartingSettingsTutorialInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="4dp"
+
+                        android:text="Introduction"
+                        android:textColor="#fff"
+                        android:textSize="19sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayStartingSettingsSkipTutorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Skip(hold)"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_transparent30_red"
+                        android:textColor="#fff"
+                        android:textSize="23sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayStartingSettingsTutorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Start"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_transparent30_green"
+                        android:textColor="#fff"
+                        android:textSize="23sp">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!--\\\  Starting settings \\\-->
+
+        <TextView
+            android:id="@+id/txvMainDisplayTutorialText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:gravity="center"
+            android:text="Welcome to the world!!! At the beginning of your adventure, click on the screen to get coins. They will be needed for further space exploration."
+            android:background="@drawable/rounded_transparent60_background_items"
+            app:layout_constraintBottom_toTopOf="@+id/llMainGameDisplayBottomToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </TextView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMainGameDisplayContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:visibility="invisible"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/transparent60BackgroundApp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txvMainGameDisplayContactInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Info"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:hint="(click to copy links)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/txvMainGameDisplayContactInfoCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvMainGameDisplayContactInfoTitle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayContactInfoContactTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Contact:"
+                        android:textColor="#fff"
+                        android:textSize="21sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayContactInfoContactDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="If you would like to know more about the game or have any questions, you can find me here"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txvCopyLinkDiscord"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="Discord - woodiest#8186"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvCopyLinkInstagram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="Instagram - kuchcinskii"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvCopyLinkTikTok"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="TikTok - michalkuchcinskii"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvCopyLinkYouTube"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="YouTube - Kuchcinskii"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayContactInfoCooperationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cooperation and support:"
+                        android:textColor="#fff"
+                        android:textSize="21sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvMainGameDisplayContactInfoCooperationDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="If you would like to support what I do, have a cool idea or would like to start cooperation, write me an e-mail"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txvCopyLinkMail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent30_background_items"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="michalkuchnickiisc@gmail.com"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </TextView>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/txvMainGameDisplayContactInfoCancel"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_transparent60_background_valuable_items"
+                android:text="Cancel"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

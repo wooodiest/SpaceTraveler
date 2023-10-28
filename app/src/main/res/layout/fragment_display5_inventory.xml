@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:background="@color/backgroundApp"
+    android:paddingTop="50dp"
+    android:paddingBottom="90dp"
+    tools:context=".Display5InventoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txvMainGameDisplayInventoryShopBar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="19sp"
+                android:text="Shop"
+                android:gravity="center"
+                android:background="@color/transparent60BackgroundValuableItems"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txvMainGameDisplayInventoryItemsBar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="19sp"
+                android:text="Inventory"
+                android:gravity="center"
+                android:background="@color/backgroundValuableItems"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/flMainGameDisplayInventory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

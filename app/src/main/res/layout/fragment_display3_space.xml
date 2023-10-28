@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:ignore="ContentDescription, RtlHardcoded, HardcodedText"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:paddingBottom="90dp"
+    tools:context=".Display3SpaceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSpaceGameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llDisplaySpaceSideQuest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_transparent60_background_items"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:padding="3dp"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/txvSideMissionTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="10dp"
+                   android:gravity="center"
+                   android:padding="2dp"
+                   android:text="Click 250 times">
+
+               </TextView>
+               <ProgressBar
+                   android:id="@+id/pbSideMission"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="15dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginBottom="5dp"
+                   android:layout_weight="1"
+                   android:max="100"
+                   android:progress="40" />
+
+           </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            app:fabSize="mini"
+            android:clickable="true"
+            android:src="@drawable/shoppingcart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDisplaySpaceSideQuest" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDailQuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:src="?attr/actionModePasteDrawable"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fabShop" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@android:drawable/presence_video_online"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fabDailQuest" />
+        <TextView
+            android:id="@+id/txvDailyquestCompletedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:text="You have completed daily quest.\nThat is all for today, you still have a lot of things to do to explore the universe. I wish you a good day!"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDisplaySpaceSideQuest">
+
+        </TextView>
+        <TextView
+            android:id="@+id/txvTutorialCompletedWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:text="I wish you a good day!"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDisplaySpaceSideQuest">
+
+        </TextView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMainGameDisplaySideMissionWindowChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDisplaySpaceSideQuest">
+            <LinearLayout
+
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_transparent60_background_app"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySideMissionWindowChangeTitle"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dp"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click 250 times">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySideMissionWindowChangeInfo"
+                    android:textColor="#fff"
+                    android:text="1/3"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/imgSideMissionReward"
+                    android:layout_margin="10dp"
+                    android:layout_width="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/coint2"
+                    android:layout_height="60dp">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/txvMainGameDisplaySideMissionWindowChangeByAdd"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Change"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_transparent60_background_valuable_items"
+                    android:layout_height="50dp">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/txvDisplaySpaceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:textColor="#fff"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            android:text="The Milky Way has about fifty satellite galaxies orbiting around it. Two of these are visible to the naked eye, the Big and Small Magellanic Clouds. The former is 1/100th of our galaxy’s size, but it lacks a clean spiral shape, probably because of the strong gravitational pull exerted by the Milky Way"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_transparent60_background_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDisplaySpaceSideQuest">
+
+        </TextView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:visibility="invisible"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@android:drawable/ic_dialog_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fabAd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
