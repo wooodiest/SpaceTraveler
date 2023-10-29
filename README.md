@@ -12,7 +12,7 @@ The project was started at the end of the summer 2022 and I worked on it for sev
 [Code Folder](app/src/main)
 
 [Main Activity](app/src/main/java/misiek/example/spacetraveler/MainActivity.kt)
-# Game Description
+## Game Description
 
 A surprisingly interesting adventure in space, which will allow you to discover some of its secrets.
 
